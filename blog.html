@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – MA Inteligência Jurídica</title>
+
+  <link rel="canonical" href="https://malcantara.adv.br/blog.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css">
+
+  <!-- Marked.js para renderizar Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+</head>
+<body class="bg-[#F8F5F0] text-[#0F172A] font-sans">
+
+  <!-- Header simples -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <a href="/"><img src="public/assets/logo.svg" alt="Logo MA" class="h-14"></a>
+      <a href="/" class="text-sm text-[#002B5C] underline">← Voltar</a>
+    </div>
+  </header>
+
+  <!-- Lista -->
+  <main id="postList" class="max-w-3xl mx-auto px-6 py-16"></main>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black/60 hidden items-start overflow-auto z-50">
+    <article id="postContent" class="bg-white max-w-3xl mx-auto mt-20 mb-16 p-8 rounded-xl shadow-lg prose prose-img:rounded-xl"></article>
+  </div>
+
+  <script>
+    const owner = "Malcantara-IA";
+    const repo  = "ma-site";
+    const api   = `https://api.github.com/repos/${owner}/${repo}/contents/posts`;
+    const lang  = (localStorage.getItem('lang') || 'pt').slice(0,2);
+
+    const list  = document.getElementById('postList');
+    const modal = document.getElementById('modal');
+    const art   = document.getElementById('postContent');
+
+    /* Utility: parse front-matter YAML simples */
+    function parseYAML(text){
+      const obj = {};
+      text.trim().split('\n').forEach(l=>{
+        const idx = l.indexOf(':');
+        if(idx>0){
+          const k = l.slice(0,idx).trim();
+          const v = l.slice(idx+1).trim().replace(/^["']|["']$/g,'');
+          obj[k]=v;
+        }
+      });
+      return obj;
+    }
+
+    /* Carrega lista de arquivos */
+    fetch(api)
+      .then(r=>r.json())
+      .then(async files=>{
+        const posts = [];
+
+        for(const f of files){
+          if(!f.name.endsWith('.md')) continue;
+          const raw = await fetch(f.download_url).then(r=>r.text());
+          const fm  = raw.match(/^---([\s\S]*?)---/);
+          if(!fm) continue;
+          const meta = parseYAML(fm[1]);
+          posts.push({
+            slug: f.name.replace('.md',''),
+            date: meta.date || '1970-01-01',
+            title_pt: meta.title_pt || meta.title || f.name,
+            title_en: meta.title_en || meta.title || f.name,
+            cover: meta.cover || null,
+            content: raw.replace(fm[0],'').trim()
+          });
+        }
+
+        /* ordena por data desc */
+        posts.sort((a,b)=>b.date.localeCompare(a.date));
+
+        /* render cards */
+        posts.forEach(p=>{
+          const card = document.createElement('div');
+          card.className="bg-white p-6 rounded-xl shadow-md mb-8 cursor-pointer hover:shadow-lg";
+          card.innerHTML = `
+            <h2 class="text-2xl font-bold mb-2">${lang==='en'?p.title_en:p.title_pt}</h2>
+            <p class="text-sm text-gray-500 mb-2">${p.date}</p>
+            ${p.cover?`<img src="${p.cover}" alt="" class="rounded-lg mb-2">`:``}
+            <p class="text-[#002B5C] underline">Ler artigo</p>
+          `;
+          card.onclick = ()=>openPost(p);
+          list.appendChild(card);
+        });
+      });
+
+    /* abre modal */
+    function openPost(p){
+      art.innerHTML = `
+        <button class="float-right text-lg" onclick="closePost()">✕</button>
+        <h1 class="mt-0">${lang==='en'?p.title_en:p.title_pt}</h1>
+        <p class="text-sm text-gray-500">${p.date}</p>
+        <hr>
+        ${marked.parse(p.content)}
+      `;
+      modal.classList.remove('hidden');
+    }
+    function closePost(){ modal.classList.add('hidden'); }
+  </script>
+</body>
+</html>
