@@ -4,6 +4,7 @@
   "menu_method": "Methodology",
   "menu_about": "About Us",
   "menu_contact": "Contact",
+  "menu_blog": "Blog",
   "hero_title": "Legal Intelligence with Purpose",
   "hero_sub": "We turn legal knowledge into real strategies for companies and business families. Technique, sensitivity and future.",
   "cta_diag": "Schedule a Consultation",
@@ -23,5 +24,4 @@
   "contact_email": "Your e-mail",
   "contact_msg": "Your message",
   "contact_send": "Send"
-  "menu_blog": "Blog"
 }
