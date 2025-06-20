@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – MA Inteligência Jurídica</title>
+  <title data-i18n="blog_title">Blog – MA Inteligência Jurídica</title>
 
   <link rel="canonical" href="https://malcantara.adv.br/blog.html">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css">
@@ -14,32 +14,59 @@
 <body class="bg-[#F8F5F0] text-[#0F172A] font-sans">
 
   <!-- Header simples -->
-  <header class="bg-white shadow-md">
+  <header class="bg-white shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-      <a href="/"><img src="public/assets/logo.svg" alt="Logo MA" class="h-14"></a>
-      <a href="/" class="text-sm text-[#002B5C] underline">← Voltar</a>
+      <a href="/"><img src="public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-14 w-auto"></a>
+      <div class="flex items-center space-x-4">
+        <a href="/" class="text-sm text-[#002B5C] underline" data-i18n="back_button">← Voltar</a>
+        <button onclick="setLang('pt')" class="px-1">PT</button>|
+        <button onclick="setLang('en')" class="px-1">EN</button>
+      </div>
     </div>
   </header>
 
-  <!-- Lista -->
+  <!-- Espaço para o header fixo -->
+  <div class="h-20"></div>
+
+  <!-- Lista de posts -->
   <main id="postList" class="max-w-3xl mx-auto px-6 py-16"></main>
 
-  <!-- Modal -->
+  <!-- Modal do post -->
   <div id="modal" class="fixed inset-0 bg-black/60 hidden items-start overflow-auto z-50">
-    <article id="postContent" class="bg-white max-w-3xl mx-auto mt-20 mb-16 p-8 rounded-xl shadow-lg prose prose-img:rounded-xl"></article>
+    <article id="postContent" class="bg-white max-w-3xl mx-auto mt-20 mb-16 p-8 rounded-xl shadow-lg prose">
+    </article>
   </div>
 
   <script>
+    // idioma e função de troca
+    function setLang(l){
+      localStorage.setItem('lang', l);
+      location.reload();
+    }
+    const lang = (localStorage.getItem('lang')||'pt').slice(0,2);
+    document.documentElement.lang = lang;
+
+    // carrega traduções
+    fetch('/i18n/'+lang+'.json')
+      .then(r=>r.json())
+      .then(tr=>{
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const k = el.dataset.i18n;
+          if(tr[k]) el.textContent = tr[k];
+        });
+      })
+      .catch(console.warn);
+
+    // configuração GitHub
     const owner = "Malcantara-IA";
     const repo  = "ma-site";
     const api   = `https://api.github.com/repos/${owner}/${repo}/contents/posts`;
-    const lang  = (localStorage.getItem('lang') || 'pt').slice(0,2);
 
     const list  = document.getElementById('postList');
     const modal = document.getElementById('modal');
     const art   = document.getElementById('postContent');
 
-    /* Utility: parse front-matter YAML simples */
+    // YAML front-matter simples
     function parseYAML(text){
       const obj = {};
       text.trim().split('\n').forEach(l=>{
@@ -53,12 +80,11 @@
       return obj;
     }
 
-    /* Carrega lista de arquivos */
+    // busca posts no GitHub
     fetch(api)
       .then(r=>r.json())
       .then(async files=>{
         const posts = [];
-
         for(const f of files){
           if(!f.name.endsWith('.md')) continue;
           const raw = await fetch(f.download_url).then(r=>r.text());
@@ -66,45 +92,38 @@
           if(!fm) continue;
           const meta = parseYAML(fm[1]);
           posts.push({
-            slug: f.name.replace('.md',''),
             date: meta.date || '1970-01-01',
             title_pt: meta.title_pt || meta.title || f.name,
             title_en: meta.title_en || meta.title || f.name,
-            cover: meta.cover || null,
             content: raw.replace(fm[0],'').trim()
           });
         }
-
-        /* ordena por data desc */
         posts.sort((a,b)=>b.date.localeCompare(a.date));
-
-        /* render cards */
         posts.forEach(p=>{
           const card = document.createElement('div');
           card.className="bg-white p-6 rounded-xl shadow-md mb-8 cursor-pointer hover:shadow-lg";
           card.innerHTML = `
             <h2 class="text-2xl font-bold mb-2">${lang==='en'?p.title_en:p.title_pt}</h2>
             <p class="text-sm text-gray-500 mb-2">${p.date}</p>
-            ${p.cover?`<img src="${p.cover}" alt="" class="rounded-lg mb-2">`:``}
-            <p class="text-[#002B5C] underline">Ler artigo</p>
+            <p class="text-[#002B5C] underline" data-i18n="read_more">Ler artigo</p>
           `;
           card.onclick = ()=>openPost(p);
           list.appendChild(card);
         });
       });
 
-    /* abre modal */
     function openPost(p){
       art.innerHTML = `
-        <button class="float-right text-lg" onclick="closePost()">✕</button>
+        <button class="float-right text-xl" onclick="closePost()">✕</button>
         <h1 class="mt-0">${lang==='en'?p.title_en:p.title_pt}</h1>
-        <p class="text-sm text-gray-500">${p.date}</p>
-        <hr>
+        <p class="text-sm text-gray-500 mb-4">${p.date}</p>
         ${marked.parse(p.content)}
       `;
       modal.classList.remove('hidden');
     }
-    function closePost(){ modal.classList.add('hidden'); }
+    function closePost(){
+      modal.classList.add('hidden');
+    }
   </script>
 </body>
 </html>
