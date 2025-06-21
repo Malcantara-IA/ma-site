@@ -90,61 +90,35 @@
   <!-- Spacer for fixed header -->
   <div class="h-16"></div>
 
-  <!-- HERO (imagem de fundo) -->
-  <section
-    class="pt-32 pb-16 bg-cover bg-center text-white text-center"
-    style="background-image: url('public/assets/banner.jpg');"
-  >
-    <div
-      class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6 backdrop-brightness-75 py-16"
-      data-aos="fade-down"
-    >
+  <!-- HERO -->
+  <section class="pt-32 pb-16 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6" data-aos="fade-down">
       <h1 class="text-4xl font-bold" data-i18n="hero_title">Inteligência Jurídica com Propósito</h1>
-      <p class="text-xl max-w-2xl" data-i18n="hero_sub">
-        Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.
-      </p>
-      <a
-        href="https://wa.me/5538984164737"
-        class="inline-block bg-[#C5A268] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90"
-        data-i18n="cta_diag"
-      >
-        Agendar Diagnóstico
-      </a>
+      <p class="text-xl max-w-2xl" data-i18n="hero_sub">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
+      <a href="https://wa.me/5538984164737" class="inline-block bg-[#C5A268] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90" data-i18n="cta_diag">Agendar Diagnóstico</a>
     </div>
   </section>
 
   <!-- SERVIÇOS -->
   <section id="servicos" class="py-20 px-6 bg-white scroll-mt-32">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center" data-i18n="services_title">Nossos Serviços</h2>
+      <h2 class="text-3xl font-bold mb-10 text-center">Por que escolher a MA?</h2>
+      <p class="text-center mb-12 max-w-3xl mx-auto">
+        Escolher a MA é optar por clareza, firmeza e confiança.
+        Somos uma estrutura de inteligência jurídica formada para empresários, juristas e famílias empresárias que não aceitam soluções superficiais.
+        Trabalhamos para construir perenidade patrimonial, harmonia societária e segurança contratual — com técnica, verdade e visão.
+        Aqui, os valores não são slogans: são cláusulas vivas que sustentam nossos atos.
+      </p>
       <div class="grid md:grid-cols-3 gap-10">
-        <!-- Contratos -->
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up">
-          <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[#C5A268]/20">
-            <svg class="w-6 h-6 text-[#C5A268]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16 2H8a2 2 0 0 0-2 2v16l6-3 6 3V4a2 2 0 0 0-2-2Z"/>
-            </svg>
-          </div>
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_contracts_h">Contratos Empresariais</h3>
           <p data-i18n="service_contracts_p">Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
         </div>
-        <!-- Sucessão -->
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[#C5A268]/20">
-            <svg class="w-6 h-6 text-[#C5A268]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 7a5 5 0 1 0 0-2 5 5 0 0 0 0 2Zm7 6a7 7 0 0 1-14 0H3a9 9 0 0 0 18 0Z"/>
-            </svg>
-          </div>
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_succession_h">Planejamento Sucessório</h3>
           <p data-i18n="service_succession_p">Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
         </div>
-        <!-- Governança -->
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[#C5A268]/20">
-            <svg class="w-6 h-6 text-[#C5A268]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4 4h16v2H4zm2 4h12v2H6zm4 4h8v2h-8zm2 4h4v2h-4z"/>
-            </svg>
-          </div>
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_governance_h">Governança Familiar</h3>
           <p data-i18n="service_governance_p">Estruturação de acordos, protocolos e governança intergeracional.</p>
         </div>
@@ -155,9 +129,11 @@
   <!-- METODOLOGIA -->
   <section id="metodologia" class="py-20 px-6 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white scroll-mt-32">
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-6" data-i18n="method_title">Nossa Metodologia</h2>
-      <p class="text-lg" data-i18n="method_text">
-        Aplicamos a lógica da Base Viva: Especialização, Autoridade, Oportunidade, Personalidade e Ambiência em cada entrega jurídica, aliando tecnologia e escuta qualificada.
+      <h2 class="text-3xl font-bold mb-6">Muito além de um serviço jurídico</h2>
+      <p class="text-lg">
+        Direito com propósito, não rotina.<br/>
+        Na MA – Inteligência Jurídica, não vendemos tempo ou pareceres padronizados. Oferecemos presença estratégica, linguagem precisa e visão de longo prazo. Cada contrato é uma semente de futuro. Cada família empresária, um legado em construção. Atendemos com a firmeza de quem conhece a Lei e a leveza de quem compreende o humano.<br/><br/>
+        Uma advocacia que protege, estrutura e conduz. Com alma.
       </p>
     </div>
   </section>
