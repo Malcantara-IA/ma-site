@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MA – Inteligência Jurídica</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       AOS.init({ duration: 700, once: true });
     });
+    function setLang(lang) {
+      alert("Tradução para '" + lang + "' ainda não implementada.");
+    }
   </script>
 </head>
 <body class="bg-gradient-to-b from-[#0C2A52] to-[#F8F5F0] text-[#0C2A52] font-sans">
-
   <!-- Header -->
-  <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow px-6 md:px-10 py-4 flex justify-between items-center">
+  <header class="fixed w-full top-0 z-50 bg-gradient-to-b from-[#0C2A52] to-[#F8F5F0] shadow px-4 md:px-10 py-4 flex justify-between items-center">
     <a href="/index.html">
-      <img src="/assets/Mauricio-Alcantara-Site.svg" alt="MA – Inteligência Jurídica" class="h-10 w-auto max-w-[160px]" />
+      <img src="/assets/Mauricio-Alcantara-Site.svg" alt="MA – Inteligência Jurídica" class="h-10">
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-white">
       <a href="#servicos" class="hover:text-[#C5A268]">Serviços</a>
       <a href="#metodologia" class="hover:text-[#C5A268]">Metodologia</a>
       <a href="#missao" class="hover:text-[#C5A268]">Missão</a>
       <a href="#contato" class="hover:text-[#C5A268]">Contato</a>
-      <a href="/blog.html" class="hover:text-[#C5A268] font-semibold">Blog</a>
+      <a href="/blog.html" class="hover:text-[#C5A268]">Blog</a>
       <button onclick="setLang('en')" class="hover:text-[#C5A268]">EN</button>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 text-center px-6">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Inteligência Jurídica com Propósito</h1>
-    <p class="text-lg md:text-xl text-white max-w-2xl mx-auto">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
+  <section class="pt-32 pb-20 text-center px-4 bg-gradient-to-b from-[#0C2A52] to-[#F8F5F0] text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Inteligência Jurídica com Propósito</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
   </section>
 
   <!-- Serviços -->
@@ -56,9 +58,9 @@
   </section>
 
   <!-- Metodologia -->
-  <section id="metodologia" class="py-16 px-6 text-center bg-white text-[#0C2A52]">
+  <section id="metodologia" class="py-16 px-6 text-center bg-white">
     <h2 class="text-3xl font-bold mb-6">Nossa Metodologia</h2>
-    <p class="max-w-3xl mx-auto text-lg">Aplicamos a lógica da Base Viva. Especialização, Autoridade, Oportunidade, Dignidade e Ambiência. Cada entrega é guiada por propósito, estratégia e conexão real com os desafios das famílias empresárias.</p>
+    <p class="max-w-3xl mx-auto text-lg text-[#0C2A52]">Aplicamos a lógica da Base Viva. Especialização, Autoridade, Oportunidade, Dignidade e Ambiência. Cada entrega é guiada por propósito, estratégia e conexão real com os desafios das famílias empresárias.</p>
   </section>
 
   <!-- Missão e Contato -->
@@ -79,22 +81,21 @@
 
   <!-- Botão WhatsApp -->
   <a href="https://wa.me/5538984164737" target="_blank" class="fixed bottom-6 right-6 z-50">
-    <img src="/assets/whatsapp.svg" alt="WhatsApp" class="w-12 h-12">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="w-12 h-12">
   </a>
 
   <!-- Rodapé -->
-  <footer class="bg-[#0C2A52] text-white text-sm py-8 px-6">
+  <footer class="bg-gradient-to-b from-[#0C2A52] to-[#F8F5F0] text-white text-sm py-8 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-4">
       <div>
         <p>© 2025 MA – Inteligência Jurídica</p>
         <p>Rua Áustria, 61 – Ibituruna – Montes Claros/MG</p>
         <p><a href="mailto:contato@malcantara.adv.br" class="underline">contato@malcantara.adv.br</a> • +55 38 98416-4737</p>
       </div>
-      <div>
+      <div class="text-right">
         <a href="#" class="underline">Voltar ao Início</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
