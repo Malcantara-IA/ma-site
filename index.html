@@ -4,79 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MA – Inteligência Jurídica</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
       AOS.init({ duration: 700, once: true });
     });
   </script>
 </head>
-<body class="bg-[#F8F5F0] text-[#0C2A52]">
-
+<body class="bg-gradient-to-b from-[#0C2A52] to-[#F8F5F0] text-[#0C2A52] font-sans">
   <!-- Header -->
-  <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm px-6 py-4 flex items-center justify-between">
+  <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow px-4 md:px-10 py-4 flex justify-between items-center">
     <a href="/index.html">
-      <img src="/assets/Mauricio-Alcantara-Site.svg" alt="MA – Inteligência Jurídica" class="h-10 w-auto max-w-[160px]">
+      <img src="/assets/Mauricio-Alcantara-Site.svg" alt="MA – Inteligência Jurídica" class="h-10">
     </a>
-    <nav class="hidden md:flex gap-6 text-sm font-semibold">
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
       <a href="#servicos" class="hover:text-[#C5A268]">Serviços</a>
       <a href="#metodologia" class="hover:text-[#C5A268]">Metodologia</a>
       <a href="#missao" class="hover:text-[#C5A268]">Missão</a>
       <a href="#contato" class="hover:text-[#C5A268]">Contato</a>
       <a href="/blog.html" class="hover:text-[#C5A268]">Blog</a>
+      <button onclick="setLang('en')" class="hover:text-[#C5A268]">EN</button>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="pt-40 pb-20 text-center bg-gradient-to-b from-[#0C2A52] to-[#0C2A52]/90 text-white">
-    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Inteligência Jurídica com Propósito</h1>
-    <p class="mt-4 text-lg max-w-2xl mx-auto">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
+  <section class="pt-32 pb-20 text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Inteligência Jurídica com Propósito</h1>
+    <p class="text-lg md:text-xl text-white max-w-2xl mx-auto">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
   </section>
 
   <!-- Serviços -->
-  <section id="servicos" class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-semibold text-center mb-12">Nossos Serviços</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up">
-        <h3 class="font-bold text-lg mb-2">Contratos Empresariais</h3>
-        <p class="text-sm text-gray-700">Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
+  <section id="servicos" class="py-16 bg-[#F8F5F0] text-[#0C2A52] px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Contratos Empresariais</h3>
+        <p>Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="font-bold text-lg mb-2">Planejamento Sucessório</h3>
-        <p class="text-sm text-gray-700">Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Planejamento Sucessório</h3>
+        <p>Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="font-bold text-lg mb-2">Governança Familiar</h3>
-        <p class="text-sm text-gray-700">Estruturação de acordos, protocolos e governança intergeracional.</p>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-bold mb-2">Governança Familiar</h3>
+        <p>Estruturação de acordos, protocolos e governança intergeracional.</p>
       </div>
     </div>
   </section>
 
   <!-- Metodologia -->
-  <section id="metodologia" class="py-20 px-6 bg-[#FDFBF7]">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6">Nossa Metodologia</h2>
-      <p class="text-gray-800 text-lg">Aplicamos a lógica da Base Viva. Especialização, Autoridade, Oportunidade, Dinidade e Ambiência. Cada entrega é guiada por propósito, estratégia e conexão real com os desafios das famílias empresárias.</p>
-    </div>
+  <section id="metodologia" class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Nossa Metodologia</h2>
+    <p class="max-w-3xl mx-auto text-lg">Aplicamos a lógica da Base Viva. Especialização, Autoridade, Oportunidade, Dignidade e Ambiência. Cada entrega é guiada por propósito, estratégia e conexão real com os desafios das famílias empresárias.</p>
   </section>
 
-  <!-- Missão -->
-  <section id="missao" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-      <div class="flex-1">
-        <h2 class="text-3xl font-semibold mb-4">Nossa Missão</h2>
-        <p class="text-gray-800">A MA existe para transformar conhecimento jurídico em impacto real, por meio de estratégia, sensibilidade e técnica. Atuamos com propósito, ao lado de empresas e famílias empresárias, promovendo perenidade, ética e inteligência jurídica aplicada.</p>
+  <!-- Missão e Contato -->
+  <section id="missao" class="py-16 bg-[#F8F5F0] px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Nossa Missão</h2>
+        <p class="text-lg">A MA existe para transformar conhecimento jurídico em impacto real, por meio de estratégia, sensibilidade e técnica. Atuamos com propósito, ao lado de empresas e famílias empresárias, promovendo perenidade, ética e inteligência jurídica aplicada.</p>
       </div>
-      <form class="flex-1 bg-white shadow p-6 rounded-lg space-y-4" id="contato">
-        <input type="text" placeholder="Seu nome" class="w-full border border-gray-300 p-2 rounded">
-        <input type="email" placeholder="Seu e-mail" class="w-full border border-gray-300 p-2 rounded">
-        <textarea placeholder="Sua mensagem" class="w-full border border-gray-300 p-2 rounded h-32"></textarea>
-        <button type="submit" class="w-full bg-[#C5A268] text-white py-2 rounded hover:bg-[#b08952] transition">Enviar</button>
+      <form id="contato" class="space-y-4">
+        <input type="text" placeholder="Seu nome" class="w-full p-3 border rounded">
+        <input type="email" placeholder="Seu e-mail" class="w-full p-3 border rounded">
+        <textarea placeholder="Sua mensagem" class="w-full p-3 border rounded h-32"></textarea>
+        <button type="submit" class="bg-[#C5A268] text-white px-6 py-3 rounded hover:bg-[#a78550]">Enviar</button>
       </form>
     </div>
   </section>
+
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5538984164737" target="_blank" class="fixed bottom-6 right-6 z-50">
+    <img src="/assets/whatsapp.svg" alt="WhatsApp" class="w-12 h-12">
+  </a>
 
   <!-- Rodapé -->
   <footer class="bg-[#0C2A52] text-white text-sm py-8 px-6">
@@ -87,15 +90,9 @@
         <p><a href="mailto:contato@malcantara.adv.br" class="underline">contato@malcantara.adv.br</a> • +55 38 98416-4737</p>
       </div>
       <div>
-        <a href="/blog.html" class="underline">Acessar Blog</a>
+        <a href="#" class="underline">Voltar ao Início</a>
       </div>
     </div>
   </footer>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/5538984164737" target="_blank" class="fixed bottom-5 right-5 z-50">
-    <img src="/assets/whatsapp-icon.png" alt="WhatsApp" class="h-12 w-12">
-  </a>
-
 </body>
 </html>
