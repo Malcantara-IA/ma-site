@@ -90,7 +90,6 @@
     </div>
   </header>
 
-  <!-- Spacer for fixed header -->
   <div class="h-20"></div>
 
   <!-- HERO -->
@@ -200,24 +199,25 @@
       document.documentElement.lang = lang;
       let tr = {};
       try {
-        // Caminho robusto: tenta ambos
-        const res = await fetch('/i18n/' + lang + '.json');
-        if (res.ok) {
-          tr = await res.json();
-        } else {
-          // fallback para path relativo se rodar local
-          const res2 = await fetch('i18n/' + lang + '.json');
-          if (res2.ok) tr = await res2.json();
-        }
+        // Primeiro tenta absoluto
+        let res = await fetch('/i18n/' + lang + '.json');
+        if (!res.ok) res = await fetch('i18n/' + lang + '.json');
+        if (res.ok) tr = await res.json();
       } catch(e) {
-        // fallback para português se der erro
+        // fallback para português
         try {
           const fallback = await fetch('/i18n/pt.json');
           tr = fallback.ok ? await fallback.json() : {};
         } catch(e2){}
-        console.warn('Erro ao carregar tradução, fallback para português.');
       }
-      // i18n de texto
+      // Só altera texto se a chave existe na tradução (não apaga nunca!)
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const k = el.dataset.i18n;
-        if (tr[k]) el.textContent = tr
+        if (tr && tr[k]) el.textContent = tr[k];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const k = el.dataset.i18nPlaceholder;
+        if (tr && tr[k]) el.placeholder = tr[k];
+      });
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 700, once
