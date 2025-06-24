@@ -74,7 +74,7 @@
   <header class="bg-white shadow-md fixed w-full z-50" role="banner" aria-label="Cabeçalho">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
       <a href="/" aria-label="Página inicial">
-        <img src="/public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-[64px] w-auto" loading="lazy" />
+        <img src="/public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-[80px] md:h-[104px] w-auto transition-all" style="max-width: 260px;" loading="lazy" />
       </a>
       <nav class="flex items-center space-x-6 font-semibold text-[#0C2A52]" aria-label="Menu principal">
         <a href="#servicos" class="hover:text-[#C5A268]" data-i18n="menu_services">Serviços</a>
@@ -90,7 +90,7 @@
     </div>
   </header>
 
-  <div class="h-20"></div>
+  <div class="h-24"></div>
 
   <!-- HERO -->
   <section class="pt-32 pb-16 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white text-center">
@@ -104,24 +104,12 @@
   <!-- SERVIÇOS -->
   <section id="servicos" class="py-20 px-6 bg-white scroll-mt-32">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center" data-i18n="service_title">Por que escolher a MA – Inteligência Jurídica?</h2>
-      <p class="text-center mb-12 max-w-3xl mx-auto" data-i18n="service_intro">
-        
-Optar pela MA é investir em clareza, firmeza e confiança. Nosso atendimento é 100 % estratégico:
-
-Cobertura Completa
-Contratos sob medida • Planejamento sucessório • Governança familiar • Compliance no agronegócio
-
-Metodologia Base Viva
-Especialização • Autoridade • Oportunidade • Personalidade • Ambiência
-
-Legado Sustentável
-Cada cláusula é um pilar de perenidade patrimonial e harmonia familiar
-
-Inovação Consciente
-IA para eficiência + sensibilidade humana em cada entrega
-
-MA não vende documentos. Construímos legados vivos com propósito e inteligência — é a paixão do seu propósito em ação.
+      <h2 class="text-3xl font-bold mb-10 text-center" data-i18n="service_title">
+        Por que escolher a MA – Inteligência Jurídica?
+      </h2>
+      <p class="text-center mb-12 max-w-3xl mx-auto text-lg" data-i18n="service_intro">
+        Escolher a MA é investir em estratégia, confiança e longevidade. Cada cliente recebe soluções jurídicas personalizadas, que unem técnica, sensibilidade humana e visão de futuro.<br>
+        Transformamos desafios em segurança, legado e harmonia.
       </p>
       <div class="grid md:grid-cols-3 gap-10">
         <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
@@ -157,7 +145,8 @@ MA não vende documentos. Construímos legados vivos com propósito e inteligên
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Quem Somos</h2>
       <p class="text-lg" data-i18n="about_text">
-        A MA nasceu para romper com a advocacia genérica. Criamos soluções sob medida, orientadas por propósito, técnica e inteligência artificial aplicada.
+        Na MA – Inteligência Jurídica, cada cliente é o centro de uma estratégia única. Nascemos para ir além da advocacia genérica: somos arquitetos de soluções jurídicas sob medida, guiados por princípios sólidos e visão de futuro.<br><br>
+        Unimos técnica apurada, sensibilidade humana e inteligência artificial de última geração para proteger o que importa: seus negócios, seu patrimônio e seu legado. Aqui, cada contrato é um pacto de confiança, cada conselho nasce da experiência e cada ação reflete a paixão pelo direito.
       </p>
     </div>
   </section>
@@ -235,6 +224,3 @@ MA não vende documentos. Construímos legados vivos com propósito e inteligên
         AOS.init({ duration: 700, once: true });
       }
     });
-  </script>
-</body>
-</html>
