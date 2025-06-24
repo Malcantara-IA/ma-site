@@ -21,11 +21,10 @@
   <meta name="twitter:description" content="Contratos, sucessão e governança familiar com inteligência." />
   <meta name="twitter:image" content="https://malcantara.adv.br/public/assets/logo.svg" />
 
-  <!-- Performance & Favicon -->
+  <!-- Performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preload" href="/public/assets/logo.svg" as="image" />
   <link rel="icon" href="/public/assets/logo.svg" type="image/svg+xml" />
-  <link rel="shortcut icon" href="/public/assets/logo.svg" type="image/svg+xml" />
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -71,56 +70,59 @@
 <body class="bg-[#F8F5F0] text-[#0F172A] font-sans">
 
   <!-- HEADER -->
-  <header class="bg-white shadow-md fixed w-full z-50" role="banner" aria-label="Cabeçalho">
+  <header class="bg-white shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
-      <a href="/" aria-label="Página inicial">
-        <img src="/public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-[80px] md:h-[104px] w-auto transition-all" style="max-width: 260px;" loading="lazy" />
+      <a href="/">
+        <img src="/public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-[84px] md:h-[120px] w-auto transition-all duration-300" />
       </a>
-      <nav class="flex items-center space-x-6 font-semibold text-[#0C2A52]" aria-label="Menu principal">
-        <a href="#servicos" class="hover:text-[#C5A268]" data-i18n="menu_services">Serviços</a>
+      <nav class="flex items-center space-x-6 font-semibold text-[#0C2A52]">
+        <a href="#servicos"    class="hover:text-[#C5A268]" data-i18n="menu_services">Serviços</a>
         <a href="#metodologia" class="hover:text-[#C5A268]" data-i18n="menu_method">Metodologia</a>
-        <a href="#sobre" class="hover:text-[#C5A268]" data-i18n="menu_about">Quem Somos</a>
-        <a href="#contato" class="hover:text-[#C5A268]" data-i18n="menu_contact">Contato</a>
-        <a href="blog.html" target="_blank" rel="noopener" class="hover:text-[#C5A268]" data-i18n="menu_blog">Blog</a>
-        <div class="border-l pl-4 ml-2 flex items-center space-x-1" aria-label="Idioma">
-          <button onclick="setLang('pt')" class="px-1" aria-label="Português">PT</button>|
-          <button onclick="setLang('en')" class="px-1" aria-label="English">EN</button>
+        <a href="#sobre"       class="hover:text-[#C5A268]" data-i18n="menu_about">Quem Somos</a>
+        <a href="#contato"     class="hover:text-[#C5A268]" data-i18n="menu_contact">Contato</a>
+        <a href="blog.html"    target="_blank" rel="noopener" class="hover:text-[#C5A268]" data-i18n="menu_blog">Blog</a>
+        <div class="border-l pl-4 ml-2 flex items-center">
+          <button onclick="setLang('pt')" class="px-1">PT</button> |
+          <button onclick="setLang('en')" class="px-1">EN</button>
         </div>
       </nav>
     </div>
   </header>
 
+  <!-- Spacer for fixed header -->
   <div class="h-24"></div>
 
   <!-- HERO -->
   <section class="pt-32 pb-16 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white text-center">
     <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6" data-aos="fade-down">
-      <h1 class="text-4xl md:text-5xl font-bold" data-i18n="hero_title">Inteligência Jurídica com Propósito</h1>
-      <p class="text-xl max-w-2xl" data-i18n="hero_sub">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
-      <a href="https://wa.me/5538984164737" target="_blank" rel="noopener" class="inline-block bg-[#C5A268] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90 focus:ring focus:ring-[#C5A268]" data-i18n="cta_diag" aria-label="Agendar Diagnóstico via WhatsApp">Agendar Diagnóstico</a>
+      <h1 class="text-4xl font-bold" data-i18n="hero_title">Inteligência Jurídica com Propósito</h1>
+      <p class="text-xl max-w-2xl" data-i18n="hero_sub">
+        Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.
+      </p>
+      <a href="https://wa.me/5538984164737" class="inline-block bg-[#C5A268] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90" data-i18n="cta_diag">
+        Agendar Diagnóstico
+      </a>
     </div>
   </section>
 
   <!-- SERVIÇOS -->
   <section id="servicos" class="py-20 px-6 bg-white scroll-mt-32">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-10 text-center" data-i18n="service_title">
-        Por que escolher a MA – Inteligência Jurídica?
-      </h2>
+      <h2 class="text-3xl font-bold mb-8 text-center" data-i18n="service_title">Por que escolher a MA – Inteligência Jurídica?</h2>
       <p class="text-center mb-12 max-w-3xl mx-auto text-lg" data-i18n="service_intro">
-        Escolher a MA é investir em estratégia, confiança e longevidade. Cada cliente recebe soluções jurídicas personalizadas, que unem técnica, sensibilidade humana e visão de futuro.<br>
+        Escolher a MA é investir em estratégia, confiança e longevidade. Cada cliente recebe soluções jurídicas personalizadas, que unem técnica, sensibilidade humana e visão de futuro.<br/>
         Transformamos desafios em segurança, legado e harmonia.
       </p>
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_contracts_h">Contratos Empresariais</h3>
           <p data-i18n="service_contracts_p">Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
         </div>
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_succession_h">Planejamento Sucessório</h3>
           <p data-i18n="service_succession_p">Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
         </div>
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
           <h3 class="text-xl font-semibold mb-2" data-i18n="service_governance_h">Governança Familiar</h3>
           <p data-i18n="service_governance_p">Estruturação de acordos, protocolos e governança intergeracional.</p>
         </div>
@@ -145,7 +147,7 @@
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Quem Somos</h2>
       <p class="text-lg" data-i18n="about_text">
-        Na MA – Inteligência Jurídica, cada cliente é o centro de uma estratégia única. Nascemos para ir além da advocacia genérica: somos arquitetos de soluções jurídicas sob medida, guiados por princípios sólidos e visão de futuro.<br><br>
+        Na MA – Inteligência Jurídica, cada cliente é o centro de uma estratégia única. Nascemos para ir além da advocacia genérica: somos arquitetos de soluções jurídicas sob medida, guiados por princípios sólidos e visão de futuro.<br/><br/>
         Unimos técnica apurada, sensibilidade humana e inteligência artificial de última geração para proteger o que importa: seus negócios, seu patrimônio e seu legado. Aqui, cada contrato é um pacto de confiança, cada conselho nasce da experiência e cada ação reflete a paixão pelo direito.
       </p>
     </div>
@@ -155,17 +157,17 @@
   <section id="contato" class="py-20 px-6 bg-[#F8F5F0] scroll-mt-32">
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Fale Conosco</h2>
-      <form action="https://formspree.io/f/mayvgkrl" method="POST" class="space-y-6" aria-label="Formulário de contato">
-        <input name="nome" type="text" required placeholder="Seu nome" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_name" autocomplete="name" />
-        <input name="email" type="email" required placeholder="Seu e-mail" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_email" autocomplete="email" />
+      <form action="https://formspree.io/f/mayvgkrl" method="POST" class="space-y-6">
+        <input name="nome" type="text" required placeholder="Seu nome" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_name" />
+        <input name="email" type="email" required placeholder="Seu e-mail" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_email" />
         <textarea name="mensagem" required placeholder="Sua mensagem" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_msg"></textarea>
-        <button type="submit" class="bg-[#0C2A52] text-white px-6 py-3 rounded-xl hover:bg-[#C5A268] transition-colors" data-i18n="contact_send">Enviar</button>
+        <button type="submit" class="bg-[#0C2A52] text-white px-6 py-3 rounded-xl hover:bg-[#C5A268]" data-i18n="contact_send">Enviar</button>
       </form>
     </div>
   </section>
 
   <!-- RODAPÉ -->
-  <footer class="bg-[#0C2A52] text-white text-sm py-6" role="contentinfo">
+  <footer class="bg-[#0C2A52] text-white text-sm py-6">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4">
       <div>
         <p>© 2025 MA – Inteligência Jurídica</p>
@@ -176,17 +178,10 @@
       <div class="text-right">
         <p><a href="mailto:contato@malcantara.adv.br" class="underline">contato@malcantara.adv.br</a></p>
         <p>+55 38 98416-4737</p>
+        <p><a href="#top" class="underline">Voltar ao Início</a></p>
       </div>
     </div>
   </footer>
-
-  <!-- WHATSAPP BUTTON -->
-  <a href="https://wa.me/5538984164737" target="_blank" aria-label="Abrir WhatsApp" class="fixed bottom-6 right-6 bg-green-500 rounded-full shadow-lg p-3 z-50 hover:bg-green-600 transition-colors" title="Fale por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path fill="white" d="M12 0C5.373 0 0 5.373 0 12c0 2.115.552 4.101 1.5 5.813L0 24l6.336-1.67A11.935 11.935 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.198.297-.767.967-.94 1.166-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.298-.347.446-.52.151-.174.2-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.612-.916-2.209-.242-.58-.487-.501-.669-.51l-.57-.011c-.198 0-.52.074-.793.372-.273.298-1.041 1.016-1.041 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.101 3.203 5.077 4.368.71.306 1.263.489 1.695.626.712.227 1.36.195 1.872.119.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    </svg>
-  </a>
 
   <!-- i18n + AOS -->
   <script>
@@ -194,13 +189,12 @@
       localStorage.setItem('lang', l); 
       location.reload();
     }
-
     window.addEventListener('DOMContentLoaded', async () => {
       const lang = localStorage.getItem('lang') || 'pt';
       document.documentElement.lang = lang;
       let tr = {};
       try {
-        // Primeiro tenta absoluto
+        // Absoluto primeiro, depois relativo
         let res = await fetch('/i18n/' + lang + '.json');
         if (!res.ok) res = await fetch('i18n/' + lang + '.json');
         if (res.ok) tr = await res.json();
@@ -211,16 +205,20 @@
           tr = fallback.ok ? await fallback.json() : {};
         } catch(e2){}
       }
-      // Só altera texto se a chave existe na tradução (não apaga nunca!)
+      // SÓ substitui texto SE houver tradução, caso contrário mantém o texto original do HTML
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const k = el.dataset.i18n;
         if (tr && tr[k]) el.textContent = tr[k];
+        else if (!tr[k]) console.warn("Tradução faltando para:", k, el.textContent);
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const k = el.dataset.i18nPlaceholder;
         if (tr && tr[k]) el.placeholder = tr[k];
       });
       if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 700, once: true });
+        AOS.init({ duration:700, once:true });
       }
     });
+  </script>
+</body>
+</html>
