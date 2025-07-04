@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="title">MA – Inteligência Jurídica | Contratos, Sucessão e Governança Familiar</title>
-  <meta name="description" content="Advocacia empresarial e familiar: contratos personalizados, planejamento sucessório e governança intergeracional para empresas e famílias empresárias." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title">
+    MA – Inteligência Jurídica | Contratos, Sucessão e Governança Familiar
+  </title>
+  <meta name="description" content="Advocacia empresarial e familiar: contratos personalizados, planejamento sucessório e governança intergeracional para empresas e famílias empresárias.">
 
   <!-- SEO / OG / Twitter -->
-  <link rel="alternate" href="https://malcantara.adv.br/" hreflang="pt-BR" />
-  <link rel="alternate" href="https://malcantara.adv.br/" hreflang="en" />
-  <link rel="canonical" href="https://malcantara.adv.br/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="MA – Inteligência Jurídica" />
-  <meta property="og:description" content="Estratégias jurídicas premium para empresas e famílias empresárias." />
-  <meta property="og:url" content="https://malcantara.adv.br/" />
-  <meta property="og:image" content="https://malcantara.adv.br/public/assets/logo.svg" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MA – Inteligência Jurídica" />
-  <meta name="twitter:description" content="Contratos, sucessão e governança familiar com inteligência." />
-  <meta name="twitter:image" content="https://malcantara.adv.br/public/assets/logo.svg" />
+  <link rel="canonical" href="https://malcantara.adv.br/">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="MA – Inteligência Jurídica">
+  <meta property="og:description" content="Estratégias jurídicas premium para empresas e famílias empresárias.">
+  <meta property="og:url"         content="https://malcantara.adv.br/">
+  <meta property="og:image"       content="https://malcantara.adv.br/public/assets/logo.svg">
+  <meta property="og:locale"      content="pt_BR">
+  <meta name="twitter:card"        content="summary_large_image">
 
   <!-- Performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preload" href="/public/assets/logo.svg" as="image" />
-  <link rel="icon" href="/public/assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preload"    href="public/assets/logo.svg" as="image">
+  <link rel="icon"       href="public/assets/logo.svg" type="image/svg+xml">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <!-- GA4 -->
@@ -42,6 +39,9 @@
     gtag('config','G-FNXCNKTCY5');
   </script>
 
+  <!-- Cookie banner (CookieYes modo bloqueio) -->
+  <script id="cookieyes" src="https://cdn-cookieyes.com/client_data/your-id.js"></script>
+
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
@@ -50,10 +50,9 @@
     "name":"MA – Inteligência Jurídica",
     "url":"https://malcantara.adv.br/",
     "logo":"https://malcantara.adv.br/public/assets/logo.svg",
-    "image":"https://malcantara.adv.br/public/assets/logo.svg",
     "description":"Advocacia empresarial e familiar: contratos, planejamento sucessório e governança familiar.",
     "telephone":"+55-38-98416-4737",
-    "email":"escritorio@malcantara.adv.br",
+    "email":"contato@malcantara.adv.br",
     "address":{
       "@type":"PostalAddress",
       "streetAddress":"Rua Áustria, 61 – Ibituruna",
@@ -65,160 +64,171 @@
     "founder":{"@type":"Person","name":"Maurício Alcântara"}
   }
   </script>
+
+  <style>
+    :root{
+      --azul: #0C2A52;
+      --azul-claro:#1553A1;
+      --creme:#F9F8F6;
+      --ouro:#C5A268;
+    }
+    /* ajuste fino Tailwind inline */
+    .bg-grad-azul{background-image:linear-gradient(90deg,var(--azul),var(--azul-claro));}
+  </style>
 </head>
 
 <body class="bg-[#F8F5F0] text-[#0F172A] font-sans">
 
-  <!-- HEADER -->
-  <header class="bg-white shadow-md fixed w-full z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
-      <a href="/">
-        <img src="/public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-[84px] md:h-[120px] w-auto transition-all duration-300" />
-      </a>
-      <nav class="flex items-center space-x-6 font-semibold text-[#0C2A52]">
-        <a href="#servicos"    class="hover:text-[#C5A268]" data-i18n="menu_services">Serviços</a>
-        <a href="#metodologia" class="hover:text-[#C5A268]" data-i18n="menu_method">Metodologia</a>
-        <a href="#sobre"       class="hover:text-[#C5A268]" data-i18n="menu_about">Quem Somos</a>
-        <a href="#contato"     class="hover:text-[#C5A268]" data-i18n="menu_contact">Contato</a>
-        <a href="blog.html"    target="_blank" rel="noopener" class="hover:text-[#C5A268]" data-i18n="menu_blog">Blog</a>
-        <div class="border-l pl-4 ml-2 flex items-center">
-          <button onclick="setLang('pt')" class="px-1">PT</button> |
-          <button onclick="setLang('en')" class="px-1">EN</button>
-        </div>
-      </nav>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
+    <a href="/"><img src="public/assets/logo.svg" alt="MA – Inteligência Jurídica" class="h-14"></a>
 
-  <!-- Spacer for fixed header -->
-  <div class="h-24"></div>
+    <nav class="space-x-6 font-semibold text-[var(--azul)] flex items-center">
+      <a href="#servicos"    class="hover:text-[var(--ouro)]" data-i18n="menu_services">Serviços</a>
+      <a href="#metodologia" class="hover:text-[var(--ouro)]" data-i18n="menu_method">Metodologia</a>
+      <a href="#sobre"       class="hover:text-[var(--ouro)]" data-i18n="menu_about">Quem Somos</a>
+      <a href="#contato"     class="hover:text-[var(--ouro)]" data-i18n="menu_contact">Contato</a>
+      <a href="/blog.html"   class="hover:text-[var(--ouro)]" data-i18n="menu_blog" target="_blank" rel="noopener">Blog</a>
+      <div class="border-l pl-4 ml-2">
+        <button onclick="setLang('pt')" class="px-1">PT</button> |
+        <button onclick="setLang('en')" class="px-1">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="pt-32 pb-16 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white text-center">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6" data-aos="fade-down">
-      <h1 class="text-4xl font-bold" data-i18n="hero_title">Inteligência Jurídica com Propósito</h1>
-      <p class="text-xl max-w-2xl" data-i18n="hero_sub">
-        Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.
-      </p>
-      <a href="https://wa.me/5538984164737" class="inline-block bg-[#C5A268] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90" data-i18n="cta_diag">
-        Agendar Diagnóstico
-      </a>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="pt-32 pb-16 bg-grad-azul text-white text-center">
+  <div class="max-w-4xl mx-auto px-4 flex flex-col items-center gap-6" data-aos="fade-down">
+    <h1 class="text-4xl font-bold" data-i18n="hero_title">Inteligência Jurídica com Propósito</h1>
+    <p class="text-xl max-w-2xl" data-i18n="hero_sub">Transformamos conhecimento jurídico em estratégias reais para empresas e famílias empresárias. Técnica, sensibilidade e futuro.</p>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="py-20 px-6 bg-white scroll-mt-32">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center" data-i18n="service_title">Por que escolher a MA – Inteligência Jurídica?</h2>
-      <p class="text-center mb-12 max-w-3xl mx-auto text-lg" data-i18n="service_intro">
-        Escolher a MA é investir em estratégia, confiança e longevidade. Cada cliente recebe soluções jurídicas personalizadas, que unem técnica, sensibilidade humana e visão de futuro.<br/>
-        Transformamos desafios em segurança, legado e harmonia.
-      </p>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-2" data-i18n="service_contracts_h">Contratos Empresariais</h3>
-          <p data-i18n="service_contracts_p">Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
+    <!-- aviso LGPD antes do WhatsApp -->
+    <a href="https://wa.me/5538984164737"
+       class="inline-block bg-[var(--ouro)] text-white font-semibold px-6 py-3 rounded-lg hover:brightness-90"
+       onclick="return confirm('Ao prosseguir, você concorda em compartilhar seu número e mensagens exclusivamente para atendimento, conforme nossa Política de Privacidade. Prosseguir?');"
+       data-i18n="cta_diag">
+       Agendar Diagnóstico
+    </a>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-20 px-6 bg-white scroll-mt-32">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-i18n="services_title">Nossos Serviços</h2>
+    <p class="max-w-3xl mx-auto mb-12 text-center">
+      <strong>Por que escolher a MA?</strong> Clareza, firmeza e confiança para construir perenidade patrimonial, harmonia societária e segurança contratual.
+    </p>
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- card 1 -->
+      <div class="bg-[var(--creme)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+        <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[var(--ouro)]/20">
+          <svg class="w-6 h-6 text-[var(--ouro)]" fill="currentColor" viewBox="0 0 24 24"><path d="M16 2H8a2 2 0 0 0-2 2v16l6-3 6 3V4a2 2 0 0 0-2-2Z"/></svg>
         </div>
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-2" data-i18n="service_succession_h">Planejamento Sucessório</h3>
-          <p data-i18n="service_succession_p">Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="service_contracts_h">Contratos Empresariais</h3>
+        <p data-i18n="service_contracts_p">Proteção jurídica, gestão de riscos e estratégia em instrumentos contratuais personalizados.</p>
+      </div>
+      <!-- card 2 -->
+      <div class="bg-[var(--creme)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[var(--ouro)]/20">
+          <svg class="w-6 h-6 text-[var(--ouro)]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0-2 5 5 0 0 0 0 2Zm7 6a7 7 0 0 1-14 0H3a9 9 0 0 0 18 0Z"/></svg>
         </div>
-        <div class="bg-[#F9F8F6] p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-2" data-i18n="service_governance_h">Governança Familiar</h3>
-          <p data-i18n="service_governance_p">Estruturação de acordos, protocolos e governança intergeracional.</p>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="service_succession_h">Planejamento Sucessório</h3>
+        <p data-i18n="service_succession_p">Organização patrimonial e sucessão harmônica com foco na perenidade familiar.</p>
+      </div>
+      <!-- card 3 -->
+      <div class="bg-[var(--creme)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 mb-4 inline-flex items-center justify-center rounded-full bg-[var(--ouro)]/20">
+          <svg class="w-6 h-6 text-[var(--ouro)]" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm2 4h12v2H6zm4 4h8v2h-8zm2 4h4v2h-4z"/></svg>
         </div>
+        <h3 class="text-xl font-semibold mb-2" data-i18n="service_governance_h">Governança Familiar</h3>
+        <p data-i18n="service_governance_p">Estruturação de acordos, protocolos e governança intergeracional.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- METODOLOGIA -->
-  <section id="metodologia" class="py-20 px-6 bg-gradient-to-r from-[#0C2A52] to-[#0A3D91] text-white scroll-mt-32">
-    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-6" data-i18n="method_title">Muito além de um serviço jurídico</h2>
-      <p class="text-lg" data-i18n="method_text">
-        Direito com propósito, não rotina.<br/>
-        Na MA – Inteligência Jurídica, não vendemos tempo ou pareceres padronizados. Oferecemos presença estratégica, linguagem precisa e visão de longo prazo. Cada contrato é uma semente de futuro. Cada família empresária, um legado em construção. Atendemos com a firmeza de quem conhece a Lei e a leveza de quem compreende o humano.<br/><br/>
-        Uma advocacia que protege, estrutura e conduz. Com alma.
+<!-- METODOLOGIA -->
+<section id="metodologia" class="py-20 px-6 bg-grad-azul text-white scroll-mt-32">
+  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6" data-i18n="method_title">Nossa Metodologia</h2>
+    <p class="text-lg">
+      <strong>Muito além de um serviço jurídico.</strong><br>
+      Na MA – Inteligência Jurídica, não vendemos tempo ou pareceres padronizados. Oferecemos presença estratégica, linguagem precisa e visão de longo prazo. Cada contrato é uma semente de futuro; cada família empresária, um legado em construção.
+    </p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-20 px-6 bg-white scroll-mt-32">
+  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Quem Somos</h2>
+    <p class="text-lg" data-i18n="about_text">
+      Criados para quem não aceita soluções superficiais. A MA rompe com a advocacia genérica ao propor inteligência jurídica de verdade: técnica, verdade e visão para perenizar patrimônio, harmonizar sociedades e proteger famílias empresárias.
+    </p>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-20 px-6 bg-[var(--creme)] scroll-mt-32">
+  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Fale Conosco</h2>
+    <form action="https://formspree.io/f/mayvgkrl" method="POST" class="space-y-6">
+      <input name="nome" type="text" required placeholder="Seu nome" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_name">
+      <input name="email" type="email" required placeholder="Seu e-mail" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_email">
+      <textarea name="mensagem" required placeholder="Sua mensagem" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_msg"></textarea>
+
+      <!-- consentimento LGPD -->
+      <label class="block text-sm text-left">
+        <input type="checkbox" name="lgpdConsent" required class="mr-2 align-middle">
+        Li e concordo com a <a href="/politica-privacidade" target="_blank" class="underline">Política de Privacidade</a>
+        e autorizo o uso dos meus dados exclusivamente para retorno deste contato.
+      </label>
+
+      <button type="submit" class="bg-[var(--azul)] text-white px-6 py-3 rounded-xl hover:bg-[var(--ouro)]" data-i18n="contact_send">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="bg-[var(--azul)] text-white text-sm py-6">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4">
+    <div>
+      <p>© 2025 MA – Inteligência Jurídica</p>
+      <p>Endereço físico: Rua Áustria, 61 – Ibituruna – Montes Claros/MG</p>
+      <p>Área de atuação: Advocacia Empresarial</p>
+      <p>Escritório digital (sem atendimento físico fixo)</p>
+      <p class="mt-2">
+        <a href="/politica-privacidade" class="underline">Política de Privacidade</a> •
+        <a href="/meus-dados" class="underline">Meus Dados (LGPD)</a>
       </p>
     </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="py-20 px-6 bg-white text-[#0F172A] scroll-mt-32">
-    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Quem Somos</h2>
-      <p class="text-lg" data-i18n="about_text">
-        Na MA – Inteligência Jurídica, cada cliente é o centro de uma estratégia única. Nascemos para ir além da advocacia genérica: somos arquitetos de soluções jurídicas sob medida, guiados por princípios sólidos e visão de futuro.<br/><br/>
-        Unimos técnica apurada, sensibilidade humana e inteligência artificial de última geração para proteger o que importa: seus negócios, seu patrimônio e seu legado. Aqui, cada contrato é um pacto de confiança, cada conselho nasce da experiência e cada ação reflete a paixão pelo direito.
-      </p>
+    <div class="text-right">
+      <p><a href="mailto:contato@malcantara.adv.br" class="underline">contato@malcantara.adv.br</a></p>
+      <p>+55 38 98416-4737</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- CONTATO -->
-  <section id="contato" class="py-20 px-6 bg-[#F8F5F0] scroll-mt-32">
-    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Fale Conosco</h2>
-      <form action="https://formspree.io/f/mayvgkrl" method="POST" class="space-y-6">
-        <input name="nome" type="text" required placeholder="Seu nome" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_name" />
-        <input name="email" type="email" required placeholder="Seu e-mail" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_email" />
-        <textarea name="mensagem" required placeholder="Sua mensagem" class="w-full p-4 border rounded-xl" data-i18n-placeholder="contact_msg"></textarea>
-        <button type="submit" class="bg-[#0C2A52] text-white px-6 py-3 rounded-xl hover:bg-[#C5A268]" data-i18n="contact_send">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer class="bg-[#0C2A52] text-white text-sm py-6">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4">
-      <div>
-        <p>© 2025 MA – Inteligência Jurídica</p>
-        <p>Endereço físico: Rua Áustria, 61 – Ibituruna – Montes Claros/MG</p>
-        <p>Área de atuação: Advocacia Empresarial</p>
-        <p>Escritório digital (sem atendimento físico fixo)</p>
-      </div>
-      <div class="text-right">
-        <p><a href="mailto:contato@malcantara.adv.br" class="underline">contato@malcantara.adv.br</a></p>
-        <p>+55 38 98416-4737</p>
-        <p><a href="#top" class="underline">Voltar ao Início</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- i18n + AOS -->
-  <script>
-    function setLang(l){ 
-      localStorage.setItem('lang', l); 
-      location.reload();
-    }
-    window.addEventListener('DOMContentLoaded', async () => {
-      const lang = localStorage.getItem('lang') || 'pt';
-      document.documentElement.lang = lang;
-      let tr = {};
-      try {
-        // Absoluto primeiro, depois relativo
-        let res = await fetch('/i18n/' + lang + '.json');
-        if (!res.ok) res = await fetch('i18n/' + lang + '.json');
-        if (res.ok) tr = await res.json();
-      } catch(e) {
-        // fallback para português
-        try {
-          const fallback = await fetch('/i18n/pt.json');
-          tr = fallback.ok ? await fallback.json() : {};
-        } catch(e2){}
-      }
-      // SÓ substitui texto SE houver tradução, caso contrário mantém o texto original do HTML
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const k = el.dataset.i18n;
-        if (tr && tr[k]) el.textContent = tr[k];
-        else if (!tr[k]) console.warn("Tradução faltando para:", k, el.textContent);
+<!-- i18n + AOS -->
+<script>
+  function setLang(l){localStorage.setItem('lang',l);location.reload();}
+  window.addEventListener('DOMContentLoaded', async () => {
+    const lang = localStorage.getItem('lang') || 'pt';
+    document.documentElement.lang = lang;
+    try{
+      const tr = await fetch('./i18n/'+lang+'.json').then(r=>r.json());
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const k=el.dataset.i18n;if(tr[k])el.textContent=tr[k];
       });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const k = el.dataset.i18nPlaceholder;
-        if (tr && tr[k]) el.placeholder = tr[k];
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+        const k=el.dataset.i18nPlaceholder;if(tr[k])el.placeholder=tr[k];
       });
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ duration:700, once:true });
-      }
-    });
-  </script>
+    }catch(e){console.warn('i18n error',e);}
+    AOS.init({duration:700,once:true});
+  });
+</script>
 </body>
 </html>
