@@ -28,6 +28,9 @@ npm run build
 O projeto gera uma exportação estática em `out/`, pronta para publicação no
 Netlify. A configuração de build está em `netlify.toml`.
 
+O artigo legado permanece preservado em `posts/` para revisão editorial. Ele
+não é publicado automaticamente na seção de Insights.
+
 ## Publicação
 
 O domínio oficial é `malcantara.adv.br`. Alterações devem passar por uma branch
