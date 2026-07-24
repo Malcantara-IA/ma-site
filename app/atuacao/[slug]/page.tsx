@@ -154,6 +154,13 @@ export default async function PracticePage({ params }: PageProps) {
                   viabilidade e documentação. Não há promessa de resultado.
                 </small>
               )}
+              {area.slug === "tributario-reforma-tributaria" && (
+                <small>
+                  A estratégia tributária depende do regime, das operações e
+                  das obrigações aplicáveis a cada empresa, com coordenação
+                  entre jurídico, contabilidade e sistemas.
+                </small>
+              )}
             </div>
           </div>
         </section>

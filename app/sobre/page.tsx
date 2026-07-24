@@ -41,10 +41,10 @@ export default function AboutPage() {
                 Advogado • OAB/MG 110.352
               </p>
               <p>
-                Especialista em direito empresarial, contratos, agronegócio,
-                planejamento sucessório e governança de famílias empresárias,
-                Maurício trabalha no encontro entre técnica jurídica e decisão
-                de negócio.
+                Especialista em direito empresarial, contratos, tributário,
+                agronegócio, planejamento sucessório e governança de famílias
+                empresárias, Maurício trabalha no encontro entre técnica
+                jurídica e decisão de negócio.
               </p>
               <p>
                 A atuação é direta, personalizada e orientada por contexto.

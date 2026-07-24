@@ -4,6 +4,7 @@ Website institucional do MA – Inteligência Jurídica, com páginas dedicadas 
 
 - empresas familiares e governança;
 - contratos empresariais;
+- tributário e implementação da reforma tributária;
 - agronegócio;
 - recuperação judicial e reestruturação;
 - sucessão patrimonial;

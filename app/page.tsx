@@ -91,8 +91,8 @@ export default function Home() {
                 <h2>Estratégia jurídica no ponto em que o risco acontece.</h2>
               </div>
               <p>
-                A atuação é integrada porque empresas, contratos, patrimônio e
-                família não vivem em gavetas separadas.
+                A atuação é integrada porque empresas, contratos, tributação,
+                patrimônio e família não vivem em gavetas separadas.
               </p>
             </div>
 
@@ -123,10 +123,11 @@ export default function Home() {
             </div>
             <div className="diagnosis-copy">
               <p>
-                Contratos desalinhados, sucessão adiada, garantias mal
-                dimensionadas e conflitos silenciosos costumam dar sinais. O
-                diagnóstico jurídico-estratégico organiza esses sinais e
-                transforma risco difuso em plano de ação.
+                Contratos desalinhados, mudanças tributárias sem plano,
+                sucessão adiada, garantias mal dimensionadas e conflitos
+                silenciosos costumam dar sinais. O diagnóstico
+                jurídico-estratégico organiza esses sinais e transforma risco
+                difuso em plano de ação.
               </p>
               <Link className="button button-outline" href="/diagnostico">
                 Entender o diagnóstico <span aria-hidden="true">→</span>
@@ -167,10 +168,10 @@ export default function Home() {
               </p>
               <p>
                 À frente do MA, Maurício atua em direito empresarial,
-                contratos, agronegócio, sucessão patrimonial e governança de
-                famílias empresárias. A abordagem combina rigor técnico,
-                leitura de negócio e comunicação direta para construir soluções
-                que funcionem fora do papel.
+                contratos, tributário, agronegócio, sucessão patrimonial e
+                governança de famílias empresárias. A abordagem combina rigor
+                técnico, leitura de negócio e comunicação direta para construir
+                soluções que funcionem fora do papel.
               </p>
               <Link className="text-link text-link-dark" href="/sobre">
                 Conhecer o MA <span aria-hidden="true">→</span>

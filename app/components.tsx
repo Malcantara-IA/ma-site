@@ -4,6 +4,7 @@ import Image from "next/image";
 const nav = [
   { label: "Empresas familiares", href: "/atuacao/empresas-familiares" },
   { label: "Contratos", href: "/atuacao/contratos-empresariais" },
+  { label: "Tributário", href: "/atuacao/tributario-reforma-tributaria" },
   { label: "Agronegócio", href: "/atuacao/agronegocio" },
   { label: "Recuperação judicial", href: "/atuacao/recuperacao-judicial" },
   { label: "Sucessão", href: "/atuacao/sucessao-patrimonial" },

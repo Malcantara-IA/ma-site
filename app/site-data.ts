@@ -103,6 +103,50 @@ export const practiceAreas: PracticeArea[] = [
       "O MA revisa a operação antes da cláusula para que o documento proteja o negócio que realmente existe.",
   },
   {
+    slug: "tributario-reforma-tributaria",
+    shortTitle: "Tributário e reforma",
+    eyebrow: "Tributação, transição e eficiência",
+    title: "Reforma tributária não é só troca de imposto. É mudança de operação.",
+    lead:
+      "Atuamos na adaptação empresarial ao IBS, à CBS e ao Imposto Seletivo, conectando tributação, contratos, preços, créditos, sistemas e fluxo de caixa, além do consultivo e do contencioso tributário.",
+    cardText:
+      "Diagnóstico e implementação da reforma tributária, planejamento, contratos e gestão de passivos fiscais.",
+    audience: [
+      "Empresas que precisam adaptar sistemas, documentos fiscais, contratos e formação de preços",
+      "Grupos empresariais e famílias que avaliam reorganizações societárias ou patrimoniais",
+      "Produtores, agroindústrias e negócios expostos a regimes específicos, créditos e benefícios fiscais",
+    ],
+    signals: [
+      "Os sistemas e documentos fiscais ainda não foram adequados ao IBS e à CBS",
+      "Os contratos não distribuem os efeitos de mudanças tributárias sobre preço, margem e créditos",
+      "A empresa não simulou o impacto da transição na cadeia, no caixa e no destino das operações",
+      "Benefícios, passivos ou escolhas de regime são tratados sem uma estratégia integrada",
+    ],
+    services: [
+      {
+        title: "Implementação da reforma",
+        text: "Diagnóstico de impactos, plano de transição, revisão de processos, documentos fiscais, contratos, preços e créditos.",
+      },
+      {
+        title: "Planejamento tributário",
+        text: "Análise de operações, reorganizações e alternativas lícitas alinhadas à realidade econômica do negócio.",
+      },
+      {
+        title: "Passivo e contencioso",
+        text: "Defesas, regularização, transação tributária e estratégia para contingências fiscais relevantes.",
+      },
+    ],
+    outcomes: [
+      "Mapa dos impactos tributários por operação e cadeia",
+      "Contratos, preços e processos alinhados à transição",
+      "Governança para obrigações, créditos e decisões fiscais",
+      "Passivos tratados com estratégia e visão de caixa",
+    ],
+    closingTitle: "Esperar a perda de margem ou a rejeição da nota é um jeito caro de começar a transição.",
+    closingText:
+      "Em 2026, a adequação já alcança documentos e sistemas, enquanto as decisões contratuais e econômicas projetam efeitos durante toda a transição. O diagnóstico define prioridades, responsáveis e cronograma.",
+  },
+  {
     slug: "agronegocio",
     shortTitle: "Agronegócio",
     eyebrow: "Crédito, operação e patrimônio rural",

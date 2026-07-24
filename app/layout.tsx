@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     template: "%s | MA – Inteligência Jurídica",
   },
   description:
-    "Advocacia empresarial estratégica para empresas familiares, contratos, agronegócio, recuperação judicial e sucessão patrimonial.",
+    "Advocacia empresarial estratégica para empresas familiares, contratos, tributário e reforma tributária, agronegócio, recuperação judicial e sucessão patrimonial.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     siteName: "MA – Inteligência Jurídica",
     title: "MA – Inteligência Jurídica",
     description:
-      "Advocacia empresarial estratégica para empresas familiares, contratos, agronegócio, recuperação judicial e sucessão patrimonial.",
+      "Advocacia empresarial estratégica para empresas familiares, contratos, tributário e reforma tributária, agronegócio, recuperação judicial e sucessão patrimonial.",
   },
   icons: {
     icon: "/favicon.svg",

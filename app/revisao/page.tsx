@@ -91,7 +91,7 @@ export default function ReviewPage() {
                 incompatível com a advocacia.
               </p>
               <p>
-                As cinco áreas têm páginas próprias para busca, campanhas e
+                As seis áreas têm páginas próprias para busca, campanhas e
                 compartilhamento. A página inicial conecta todas elas sob um
                 posicionamento único: empresa, patrimônio e legado.
               </p>

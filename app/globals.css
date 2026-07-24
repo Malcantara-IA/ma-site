@@ -494,11 +494,6 @@ summary {
     color 180ms ease;
 }
 
-.practice-card:nth-child(4),
-.practice-card:nth-child(5) {
-  grid-column: span 3;
-}
-
 .practice-card:hover {
   background: var(--navy-2);
   color: white;
@@ -1694,9 +1689,7 @@ summary {
     padding: 26px 0;
   }
 
-  .practice-card,
-  .practice-card:nth-child(4),
-  .practice-card:nth-child(5) {
+  .practice-card {
     grid-column: span 3;
   }
 

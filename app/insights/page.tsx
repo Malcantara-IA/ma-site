@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Insights",
   description:
-    "Análises do MA sobre empresas familiares, contratos, agronegócio, recuperação judicial e sucessão.",
+    "Análises do MA sobre empresas familiares, contratos, tributário e reforma tributária, agronegócio, recuperação judicial e sucessão.",
 };
 
 const upcomingInsights = [
@@ -63,9 +63,9 @@ export default function InsightsPage() {
             <p className="eyebrow">MA Comunica</p>
             <h1>Análise jurídica para decisões que não cabem em manchetes.</h1>
             <p className="inner-lead">
-              Conteúdo direto sobre contratos, empresas familiares,
-              agronegócio, crise e patrimônio — sempre conectado ao impacto no
-              negócio.
+              Conteúdo direto sobre contratos, empresas familiares, tributário,
+              reforma tributária, agronegócio, crise e patrimônio — sempre
+              conectado ao impacto no negócio.
             </p>
           </div>
         </section>
