@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { practiceAreas } from "./site-data";
+import { getPublishedInsights } from "../lib/insights";
 
 const baseUrl = "https://malcantara.adv.br";
 
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...getPublishedInsights().map((insight) => ({
+      url: `${baseUrl}/insights/${insight.slug}`,
+      lastModified: new Date(`${insight.date}T12:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
   ];
 }

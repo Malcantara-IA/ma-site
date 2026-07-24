@@ -31,6 +31,10 @@ Netlify. A configuração de build está em `netlify.toml`.
 O artigo legado permanece preservado em `posts/` para revisão editorial. Ele
 não é publicado automaticamente na seção de Insights.
 
+Para criar e publicar artigos, consulte `GUIA_ARTIGOS.md` e duplique o arquivo
+`posts/_modelo.md`. Arquivos com `draft: true` permanecem ocultos; ao alterar
+para `draft: false`, o artigo entra automaticamente na listagem e no sitemap.
+
 ## Publicação
 
 O domínio oficial é `malcantara.adv.br`. Alterações devem passar por uma branch

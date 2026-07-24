@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Footer, Header } from "../components";
+import {
+  formatInsightDate,
+  getPublishedInsights,
+} from "../../lib/insights";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -7,7 +12,7 @@ export const metadata: Metadata = {
     "Análises do MA sobre empresas familiares, contratos, agronegócio, recuperação judicial e sucessão.",
 };
 
-const insights = [
+const upcomingInsights = [
   {
     series: "Família empresária em risco",
     title: "Quando a sucessão é adiada, a empresa paga a conta",
@@ -47,6 +52,8 @@ const insights = [
 ];
 
 export default function InsightsPage() {
+  const publishedInsights = getPublishedInsights();
+
   return (
     <>
       <Header />
@@ -67,23 +74,41 @@ export default function InsightsPage() {
           <div className="shell">
             <div className="section-heading split-heading">
               <div>
-                <p className="eyebrow eyebrow-blue">Pautas iniciais</p>
+                <p className="eyebrow eyebrow-blue">
+                  {publishedInsights.length ? "Últimos artigos" : "Pautas iniciais"}
+                </p>
                 <h2>Conteúdo para antecipar risco e melhorar decisão.</h2>
               </div>
               <p>
-                Estrutura editorial proposta. Os artigos completos podem ser
-                incorporados após a revisão das pautas prioritárias.
+                Análises desenvolvidas pelo MA para conectar direito, operação,
+                patrimônio e estratégia.
               </p>
             </div>
             <div className="insight-grid">
-              {insights.map((insight) => (
-                <article key={insight.title}>
-                  <span>{insight.series}</span>
-                  <h3>{insight.title}</h3>
-                  <p>{insight.excerpt}</p>
-                  <small>Artigo em preparação</small>
-                </article>
-              ))}
+              {publishedInsights.length
+                ? publishedInsights.map((insight) => (
+                    <Link
+                      className="insight-card"
+                      href={`/insights/${insight.slug}`}
+                      key={insight.slug}
+                    >
+                      <span>{insight.category}</span>
+                      <h3>{insight.title}</h3>
+                      <p>{insight.excerpt}</p>
+                      <small>
+                        {formatInsightDate(insight.date)} • {insight.readTime}
+                      </small>
+                      <strong>Leia o artigo →</strong>
+                    </Link>
+                  ))
+                : upcomingInsights.map((insight) => (
+                    <article key={insight.title}>
+                      <span>{insight.series}</span>
+                      <h3>{insight.title}</h3>
+                      <p>{insight.excerpt}</p>
+                      <small>Artigo em preparação</small>
+                    </article>
+                  ))}
             </div>
           </div>
         </section>

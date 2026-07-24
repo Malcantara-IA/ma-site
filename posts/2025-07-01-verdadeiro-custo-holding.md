@@ -1,7 +1,10 @@
 ---
-title_pt: "O Verdadeiro Custo de uma Holding Mal Feita: Quando Economizar Sai Caro"
-title_en: "The Real Cost of a Poorly Made Holding: When Saving Costs Millions"
-date: 2025-07-01
+title: "O verdadeiro custo de uma holding mal estruturada"
+excerpt: "Riscos jurídicos, tributários e sucessórios que precisam ser revisados antes da publicação deste artigo."
+date: "2025-07-01"
+category: "Patrimônio e legado"
+author: "Maurício Barbosa Alcântara"
+draft: true
 ---
 
 ## Introdução
