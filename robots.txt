@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://malcantara.adv.br/sitemap.xml
