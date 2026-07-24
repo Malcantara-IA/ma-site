@@ -46,26 +46,6 @@ summary {
   margin: 0 auto;
 }
 
-.review-bar {
-  background: var(--gold);
-  color: var(--navy);
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.review-bar .shell {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 30px;
-}
-
-.review-bar a {
-  border-bottom: 1px solid currentColor;
-}
-
 .site-header {
   position: sticky;
   z-index: 20;
@@ -1762,14 +1742,6 @@ summary {
 @media (max-width: 640px) {
   .shell {
     width: min(100% - 32px, 1180px);
-  }
-
-  .review-bar .shell {
-    justify-content: center;
-  }
-
-  .review-bar a {
-    display: none;
   }
 
   .nav-shell {
