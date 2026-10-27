@@ -6,7 +6,7 @@ const nav = [
   { label: "Contratos", href: "/atuacao/contratos-empresariais" },
   { label: "Tributário", href: "/atuacao/tributario-reforma-tributaria" },
   { label: "Agronegócio", href: "/atuacao/agronegocio" },
-  { label: "Recuperação judicial", href: "/atuacao/recuperacao-judicial" },
+  { label: "Reestruturação de dívidas", href: "/atuacao/reestruturacao-de-dividas" },
   { label: "Sucessão", href: "/atuacao/sucessao-patrimonial" },
 ];
 
@@ -139,3 +139,4 @@ export function Footer() {
     </footer>
   );
 }
+

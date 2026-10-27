@@ -13,3 +13,17 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+
+# Preserve links to the former page while consolidating the content.
+[[redirects]]
+  from = "/atuacao/recuperacao-judicial"
+  to = "/atuacao/reestruturacao-de-dividas/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/atuacao/recuperacao-judicial/"
+  to = "/atuacao/reestruturacao-de-dividas/"
+  status = 301
+  force = true
