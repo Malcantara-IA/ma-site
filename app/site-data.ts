@@ -191,48 +191,22 @@ export const practiceAreas: PracticeArea[] = [
       "O diagnóstico considera produção, fluxo, estrutura familiar e contratos para definir prioridades reais.",
   },
   {
-    slug: "recuperacao-judicial",
-    shortTitle: "Recuperação judicial",
-    eyebrow: "Crise e reestruturação",
-    title: "A crise exige velocidade. A recuperação exige método.",
-    lead:
-      "Conduzimos diagnóstico de crise, negociação com credores e recuperação judicial com visão jurídica, financeira e operacional integrada.",
-    cardText:
-      "Diagnóstico, proteção do caixa, negociação e reestruturação para empresas viáveis sob pressão.",
-    audience: [
-      "Empresas viáveis com pressão crescente de caixa e credores",
-      "Grupos com execuções, bloqueios ou risco sobre ativos essenciais",
-      "Gestores que precisam comparar negociação, cautelar e recuperação judicial",
-    ],
-    signals: [
-      "Parcelas financeiras consomem o caixa operacional",
-      "Execuções e bloqueios ameaçam ativos essenciais",
-      "Negociações isoladas criam um efeito dominó",
-      "A empresa perdeu previsibilidade sobre vencimentos e garantias",
-    ],
+    slug: "reestruturacao-de-dividas",
+    shortTitle: "Reestruturação de dívidas",
+    eyebrow: "Insolvência, negociação e continuidade",
+    title: "Reestruturação de dívidas e continuidade empresarial.",
+    lead: "Direito da insolvência, negociação com credores e transação tributária. Contratos, garantias e capacidade de pagamento na mesma análise.",
+    cardText: "Direito da insolvência, reestruturação de dívidas e transação tributária para a continuidade empresarial.",
+    audience: ["PMEs e famílias empresárias com pressão sobre o caixa"],
+    signals: ["Parcelas bancárias comprimem o capital de giro"],
     services: [
-      {
-        title: "Diagnóstico de viabilidade",
-        text: "Mapa de credores, contratos, garantias, caixa, contingências e alternativas.",
-      },
-      {
-        title: "Proteção e negociação",
-        text: "Estratégia pré-processual, cautelar, coordenação de credores e preservação da operação.",
-      },
-      {
-        title: "Recuperação judicial",
-        text: "Preparação documental, ajuizamento, plano, assembleia e acompanhamento do processo.",
-      },
+      {title: "Reestruturação de dívidas", text: "Análise do passivo e negociação com bancos e fornecedores."},
+      {title: "Direito da insolvência", text: "Negociação, mediação e procedimentos recuperacionais conforme cada situação."},
+      {title: "Transação tributária", text: "Análise do passivo fiscal e das modalidades disponíveis."},
     ],
-    outcomes: [
-      "Visão consolidada do passivo e das prioridades",
-      "Coordenação jurídica da crise",
-      "Preservação da atividade e dos ativos essenciais",
-      "Plano de reestruturação juridicamente executável",
-    ],
-    closingTitle: "Recuperação judicial não é atalho. É uma ferramenta de reorganização.",
-    closingText:
-      "Cada caso depende de viabilidade, documentação e estratégia própria. O primeiro passo é saber se a medida protege ou apenas adia o problema.",
+    outcomes: ["Visão integrada das dívidas, garantias e capacidade de pagamento"],
+    closingTitle: "Uma conversa inicial para compreender a situação.",
+    closingText: "A ferramenta acompanha o diagnóstico.",
   },
   {
     slug: "sucessao-patrimonial",
@@ -279,3 +253,4 @@ export const practiceAreas: PracticeArea[] = [
       "A estrutura só vem depois do diagnóstico da família, do patrimônio e dos objetivos.",
   },
 ];
+

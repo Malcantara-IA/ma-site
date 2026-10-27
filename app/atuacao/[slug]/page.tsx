@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer, Header } from "../../components";
 import { practiceAreas } from "../../site-data";
+import { RestructuringPage } from "../../reestruturacao";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -25,6 +26,8 @@ export async function generateMetadata({
   return {
     title: area.shortTitle,
     description: area.lead,
+    alternates: { canonical: `/atuacao/${area.slug}/` },
+    ...(area.slug === "reestruturacao-de-dividas" ? { openGraph: { title: "Reestruturação de dívidas e continuidade empresarial", description: area.lead, url: "/atuacao/reestruturacao-de-dividas/" } } : {}),
   };
 }
 
@@ -36,6 +39,8 @@ export default async function PracticePage({ params }: PageProps) {
   if (!area) {
     notFound();
   }
+
+  if (slug === "reestruturacao-de-dividas") return <RestructuringPage />;
 
   const nextArea = practiceAreas[(areaIndex + 1) % practiceAreas.length];
   const message = encodeURIComponent(
@@ -178,3 +183,4 @@ export default async function PracticePage({ params }: PageProps) {
     </>
   );
 }
+
